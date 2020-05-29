@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Type Definitions¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Value Expression¶" href="ValExpr.html" />
+    <link rel="prev" title="TorXakis Index¶" href="TorXakis_Index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -338,10 +339,10 @@
 <li class="toctree-l2"><a class="reference internal" href="TorXakis_Index.html#w">W¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="TypeDefs.html">Type Definitions¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TypeDefs.html#syntax">Syntax¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TypeDefs.html#semantics">Semantics¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TypeDefs.html#examples">Examples¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Type Definitions¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples¶</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ValExpr.html">Value Expression¶</a><ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Type Definitions¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/TypeDefs.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,110 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="ValExpr.html" class="btn btn-neutral float-right" title="Value Expression¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="TorXakis_Index.html" class="btn btn-neutral float-left" title="TorXakis Index¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="type-definitions">
+<h1>Type Definitions<a class="reference external" href="#Type-Definitions">¶</a><a class="headerlink" href="#type-definitions" title="Permalink to this headline">¶</a></h1>
+<p>In TorXakis, the user can define data types using the TYPEDEF keyword.</p>
+<p>TorXakis will generate equality, type checking, and accessors
+<a class="reference external" href="Function">functions</a> for the user defined data types.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="reference external" href="#Syntax">¶</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<table><tbody><tr><td><p>typeDefs</p>
+</td><td><p>“TYPEDEF” typeDef (“;” typeDef)* “ENDDEF”</p>
+</td></tr><tr><td><p>typeDef</p>
+</td><td><p>typeName “::=” neConstructorList</p>
+</td></tr><tr><td><p>neConstructorList</p>
+</td><td><p>constructor (“|” constructor)*</p>
+</td></tr><tr><td><p>constructor</p>
+</td><td><p>constructorName (“{” neFieldsList “}”)?</p>
+</td></tr><tr><td><p>neFieldsList</p>
+</td><td><p>fields (“;” fields)*</p>
+</td></tr><tr><td><p>fields</p>
+</td><td><p>neFieldNameList “::” typeName</p>
+</td></tr><tr><td><p>neFieldNameList</p>
+</td><td><p>fieldName (“,” fieldName )*</p>
+</td></tr><tr><td><p>typeName</p>
+</td><td><p><a class="reference external" href="CapsId">CapsId</a></p>
+</td></tr><tr><td><p>constructorName</p>
+</td><td><p><a class="reference external" href="CapsId">CapsId</a></p>
+</td></tr><tr><td><p>fieldname</p>
+</td><td><p><a class="reference external" href="SmallId">SmallId</a></p>
+</td></tr></tbody></table></div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Define data types.</div>
+<div class="line">A data type has a unique typeName.</div>
+</div>
+<div class="line-block">
+<div class="line">A data type must contain one or more constructors.</div>
+<div class="line">A data type cannot contain constructors with the same constructorName.</div>
+</div>
+<div class="line-block">
+<div class="line">A constructor can contain zero or more fields.</div>
+<div class="line">A data type cannot contain fields with the same fieldname.</div>
+<div class="line">Hence, a constructor cannot contain fields with the same fieldname,</div>
+<div class="line">and multiple constructors cannot contain a field with the same
+fieldname.</div>
+</div>
+<div class="line-block">
+<div class="line">The typeName associated with fields refers to a <a class="reference external" href="Data_Type">data
+type</a>: either a <a class="reference external" href="Data_Type">predefined data type</a> or
+a <a class="reference external" href="TypeDefs">user defined data type</a>.</div>
+<div class="line">A data type is called recursive when one or more fields refer to
+itself.</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="reference external" href="#Examples">¶</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The statement</p>
+<pre>TYPEDEF Point ::= CPoint { x, y :: Int } ENDDEF
+</pre><p>defines the data type Point as the Cartesian product of two integers.
+These integers are referred to as x and y.</p>
+<p>The statement</p>
+<pre>TYPEDEF Conditional_Int ::=
+          CAbsent_Int
+        | CPresent_Int { value :: Int }
+ENDDEF
+</pre><p>defines the data type Conditional_Int as the union of the absence of a
+value and the presence of any integer value.</p>
+<p>The statement</p>
+<pre>TYPEDEF List_Int ::=
+         CNil_Int
+      |  Cstr_Int { head :: Int; tail :: List_Int }  ENDDEF
+</pre><p>defines the recursive data type List_Int as the union of the empty list
+and the list constructor: The Cartesian product of an integer referred
+to as head, and a List_Int referred to as tail.</p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ValExpr.html" class="btn btn-neutral float-right" title="Value Expression¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="TorXakis_Index.html" class="btn btn-neutral float-left" title="TorXakis Index¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +563,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

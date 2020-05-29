@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Channel Definition¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Choice Operator¶" href="Choice_Operator.html" />
+    <link rel="prev" title="CapsId¶" href="CapsId.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,17 +85,17 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#examples">Examples¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ChanDefs.html">Channel Definition¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ChanDefs.html#syntax">Syntax¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ChanDefs.html#semantics">Semantics¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ChanDefs.html#examples">Examples¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Channel Definition¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples¶</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Choice_Operator.html">Choice Operator¶</a><ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Channel Definition¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/ChanDefs.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,79 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Choice_Operator.html" class="btn btn-neutral float-right" title="Choice Operator¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CapsId.html" class="btn btn-neutral float-left" title="CapsId¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="channel-definition">
+<h1>Channel Definition<a class="reference external" href="#Channel-Definition">¶</a><a class="headerlink" href="#channel-definition" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>Syntax<a class="reference external" href="#Syntax">¶</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<table><tbody><tr><td><p>chanDefs</p>
+</td><td><p>“CHANDEF” chanDefName “::=” neChannelsDeclList “ENDDEF”</p>
+</td></tr><tr><td><p>neChannelsDeclList</p>
+</td><td><p>channelsDecl (“;” channelsDecl)*</p>
+</td></tr><tr><td><p>channelsDecl</p>
+</td><td><p>neChannelNameList (“::” neTypeNameList)?</p>
+</td></tr><tr><td><p>neChannelNameList</p>
+</td><td><p>channelName (“,” channelName)*</p>
+</td></tr><tr><td><p>neTypeNameList</p>
+</td><td><p>typeName (“#” typeName)*</p>
+</td></tr><tr><td><p>chanDefName</p>
+</td><td><p><a class="reference external" href="CapsId">CapsId</a></p>
+</td></tr><tr><td><p>channelName</p>
+</td><td><p><a class="reference external" href="CapsId">CapsId</a></p>
+</td></tr><tr><td><p>typeName</p>
+</td><td><p><a class="reference external" href="CapsId">CapsId</a></p>
+</td></tr></tbody></table></div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<p>Define all channels that are used on the highest level in the
+TorXakis-file, i.e., in model definitions (<a class="reference external" href="ModelDefs">MODELDEF</a>) and
+in connection definitions (<a class="reference external" href="CnectDefs">CNECTDEF</a>). For each channel
+the types of messages communicated via that channel are defined. At the
+CHANDEF level, channels do not have an I/O-direction yet; I/O is added
+on the level of <a class="reference external" href="ModelDefs">MODELDEF</a> and <a class="reference external" href="CnectDefs">CNECTDEF</a>.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="reference external" href="#Examples">¶</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The definition</p>
+<pre>CHANDEF Channels
+    ::=
+        Action :: Operation;
+        Input  :: Int # Int;
+        Result :: Int
+ENDDEF
+</pre><p>defines three channels: <code class="docutils literal notranslate"><span class="pre">Action</span></code>, <code class="docutils literal notranslate"><span class="pre">Input</span></code>, and <code class="docutils literal notranslate"><span class="pre">Result</span></code>, with
+messages of types <code class="docutils literal notranslate"><span class="pre">Operation</span></code>, (<code class="docutils literal notranslate"><span class="pre">Int</span></code> x <code class="docutils literal notranslate"><span class="pre">Int</span></code>), and <code class="docutils literal notranslate"><span class="pre">Int</span></code>,
+respectively.</p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Choice_Operator.html" class="btn btn-neutral float-right" title="Choice Operator¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CapsId.html" class="btn btn-neutral float-left" title="CapsId¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +532,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

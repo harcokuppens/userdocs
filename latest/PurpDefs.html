@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Test Purpose Definitions &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="STOP¶" href="STOP.html" />
+    <link rel="prev" title="ProcessBehaviour¶" href="ProcessBehaviour.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -265,10 +266,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ProcessBehaviour.html#examples">Examples¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PurpDefs.html">Test Purpose Definitions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PurpDefs.html#syntax">Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PurpDefs.html#semantics">Semantics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PurpDefs.html#examples">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Test Purpose Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="STOP.html">STOP¶</a><ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Test Purpose Definitions</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/PurpDefs.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,114 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="STOP.html" class="btn btn-neutral float-right" title="STOP¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ProcessBehaviour.html" class="btn btn-neutral float-left" title="ProcessBehaviour¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="test-purpose-definitions">
+<h1>Test Purpose Definitions<a class="headerlink" href="#test-purpose-definitions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>purpDef</p></td>
+<td><p>“PURPDEF” purpName “::=” “CHAN”
+“IN” neChannelNameList? “CHAN”
+“OUT” neChannelNameList? neGoals
+“ENDDEF”</p></td>
+</tr>
+<tr class="row-odd"><td><p>neChannelNameList</p></td>
+<td><p>channelName (“,” channelName)*</p></td>
+</tr>
+<tr class="row-even"><td><p>modelName</p></td>
+<td><p><a class="reference external" href="CapsId">CapsId</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>channelName</p></td>
+<td><p><a class="reference external" href="CapsId">CapsId</a></p></td>
+</tr>
+<tr class="row-even"><td><p>neGoals</p></td>
+<td><p>goal (, goal)*</p></td>
+</tr>
+<tr class="row-odd"><td><p>goal</p></td>
+<td><p>“GOAL” goalName “::=”
+<a class="reference external" href="ProcessBehaviour">processBehaviour</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<p>Define a Test Purpose, with its input and output channels for external
+communication, and the definition of the behaviour to be tested. Input
+and output channels shall be defined in a <a class="reference external" href="ChanDefs">channel
+definition</a>.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>A test purpose for a <a class="reference external" href="ModelDefs">Model Definition</a> like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROCDEF</span> <span class="n">modelBehaviour</span> <span class="p">[</span> <span class="n">In</span> <span class="p">::</span> <span class="n">InType</span> <span class="p">;</span> <span class="n">Out</span> <span class="p">::</span> <span class="n">OutType</span> <span class="p">]</span> <span class="p">()</span> <span class="p">:</span><span class="o">:=</span>
+    <span class="o">--</span> <span class="n">Model</span> <span class="n">behaviour</span> <span class="n">definition</span>
+<span class="n">ENDDEF</span>
 
-  
-  <div id="search-results">
-  
-  </div>
+<span class="n">MODELDEF</span> <span class="n">Model</span> <span class="p">:</span><span class="o">:=</span>
+    <span class="n">CHAN</span> <span class="n">IN</span>    <span class="n">In</span>
+    <span class="n">CHAN</span> <span class="n">OUT</span>   <span class="n">Out</span>
+
+    <span class="n">BEHAVIOUR</span>
+        <span class="n">modelBehaviour</span><span class="p">[</span><span class="n">In</span><span class="p">,</span> <span class="n">Out</span><span class="p">]()</span>
+<span class="n">ENDDEF</span>
+</pre></div>
+</div>
+<p>can be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROCDEF</span> <span class="n">processBehaviour</span> <span class="p">[</span> <span class="n">In</span> <span class="p">::</span> <span class="n">InType</span> <span class="p">;</span> <span class="n">Out</span> <span class="p">::</span> <span class="n">OutType</span> <span class="p">]</span> <span class="p">(</span> <span class="n">inputValue</span> <span class="p">::</span> <span class="n">Int</span><span class="p">)</span> <span class="n">HIT</span> <span class="p">:</span><span class="o">:=</span>
+    <span class="o">--</span> <span class="n">Process</span> <span class="n">behaviour</span> <span class="n">definition</span>
+<span class="n">ENDDEF</span>
+
+<span class="n">PURPDEF</span> <span class="n">TestPurpose</span> <span class="p">:</span><span class="o">:=</span>
+    <span class="n">CHAN</span> <span class="n">IN</span>    <span class="n">In</span>
+    <span class="n">CHAN</span> <span class="n">OUT</span>   <span class="n">Out</span>
+
+    <span class="n">GOAL</span> <span class="n">purposeGoal1</span> <span class="p">:</span><span class="o">:=</span> <span class="n">processBehaviour</span> <span class="p">[</span><span class="n">In</span><span class="p">,</span><span class="n">Out</span><span class="p">]</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">GOAL</span> <span class="n">purposeGoal2</span> <span class="p">:</span><span class="o">:=</span> <span class="n">processBehaviour</span> <span class="p">[</span><span class="n">In</span><span class="p">,</span><span class="n">Out</span><span class="p">]</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ENDDEF</span>
+</pre></div>
+</div>
+</div>
+</div>
+
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="STOP.html" class="btn btn-neutral float-right" title="STOP¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ProcessBehaviour.html" class="btn btn-neutral float-left" title="ProcessBehaviour¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +567,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

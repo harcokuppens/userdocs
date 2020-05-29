@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Guard Operator¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="HIDE¶" href="HIDE.html" />
+    <link rel="prev" title="Function¶" href="Function.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -182,10 +183,10 @@
 <li class="toctree-l2"><a class="reference internal" href="Function.html#user-defined-functions">User Defined Functions¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Guard_Operator.html">Guard Operator¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Guard_Operator.html#syntax">Syntax¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Guard_Operator.html#semantics">Semantics¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Guard_Operator.html#example">Example¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guard Operator¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example¶</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="HIDE.html">HIDE¶</a><ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Guard Operator¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/Guard_Operator.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,56 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="HIDE.html" class="btn btn-neutral float-right" title="HIDE¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Function.html" class="btn btn-neutral float-left" title="Function¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="guard-operator">
+<h1>Guard Operator<a class="reference external" href="#Guard-Operator">¶</a><a class="headerlink" href="#guard-operator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>Syntax<a class="reference external" href="#Syntax">¶</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<table><tbody><tr><td><p>guardedProcessBehaviour</p>
+</td><td><p><a class="reference external" href="Condition">condition</a> =&gt;&gt; <a class="reference external" href="ProcessBehaviour">processBehaviour</a></p>
+</td></tr><tr><td><p><a class="reference external" href="Condition">condition</a></p>
+</td><td><p>[[ <a class="reference external" href="ValExpr">valExpr</a> ]]</p>
+</td></tr></tbody></table></div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Conditional execution: [[ expr ]] =&gt;&gt; next</div>
+<div class="line">Next is only executed when expr is true</div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="reference external" href="#Example">¶</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>[[ not(isNil(buf)) ]] =&gt;&gt; Value !head(buf)</p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="HIDE.html" class="btn btn-neutral float-right" title="HIDE¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Function.html" class="btn btn-neutral float-left" title="Function¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +509,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

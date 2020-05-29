@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>TorXakis¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TorXakis Index¶" href="TorXakis_Index.html" />
+    <link rel="prev" title="Synchronous Operator¶" href="Synchronous_Operator.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -316,7 +317,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Synchronous_Operator.html#examples">Examples¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="TorXakis.html">TorXakis¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TorXakis¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TorXakis_Index.html">TorXakis Index¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="TorXakis_Index.html#a">A¶</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TorXakis_Index.html#b">B¶</a></li>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>TorXakis¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/TorXakis.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,66 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="TorXakis_Index.html" class="btn btn-neutral float-right" title="TorXakis Index¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Synchronous_Operator.html" class="btn btn-neutral float-left" title="Synchronous Operator¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="torxakis">
+<h1>TorXakis<a class="reference external" href="#TorXakis">¶</a><a class="headerlink" href="#torxakis" title="Permalink to this headline">¶</a></h1>
+<p>TorXakis uses a <a class="reference external" href="Language_Definition">specification</a> to test a
+System-Under-Test (SUT) or simulate a System.</p>
+<p>A TorXakis <a class="reference external" href="Language_Definition">specification</a> contains three parts:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="ModelDefs">Model</a> - Composition of processes instances that
+models the behavior of the SUT</p></li>
+<li><p><a class="reference external" href="AdapDefs.html">Adapter</a> - Map abstract specification on actual
+SUT interfaces.</p></li>
+<li><p><a class="reference external" href="CnectDefs">Connection</a> - Describe external interfaces to SUT or
+of simulated system.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">TorXakis uses the Input-Output Conformance (IOCO) theory to</div>
+<div class="line">check the actual against the specified externally observable
+behaviour.</div>
+</div>
+<div class="line-block">
+<div class="line">TorXakis is a command line tool that takes zero or more
+<a class="reference external" href="Language_Definition">specification</a> files as input.</div>
+<div class="line">TorXakis has many <a class="reference external" href="Commands">commands</a>: the command ‘help’ provides
+a short summary of all <a class="reference external" href="Commands">commands</a>.</div>
+</div>
+<p>A TorXakis Editor for the Eclipse IDE is provided as a plug-in. See
+<a class="reference external" href="Eclipse">Eclipse</a>.</p>
+<div class="line-block">
+<div class="line">Copyright © 2015-2016 TNO and Radboud University</div>
+<div class="line">All rights reserved.</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="TorXakis_Index.html" class="btn btn-neutral float-right" title="TorXakis Index¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Synchronous_Operator.html" class="btn btn-neutral float-left" title="Synchronous Operator¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +519,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

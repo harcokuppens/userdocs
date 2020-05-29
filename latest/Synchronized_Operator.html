@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Synchronized Operator¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Synchronous Operator¶" href="Synchronous_Operator.html" />
+    <link rel="prev" title="Synchronized Channels Operator¶" href="Synchronized_Channels_Operator.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -299,13 +300,13 @@
 <li class="toctree-l2"><a class="reference internal" href="Synchronized_Channels_Operator.html#example">Example¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Synchronized_Operator.html">Synchronized Operator¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Synchronized_Operator.html#syntax">Syntax¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Synchronized_Operator.html#semantics">Semantics¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Synchronized_Operator.html#examples">Examples¶</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Synchronized_Operator.html#communication">Communication¶</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Synchronized_Operator.html#constrained-communication">Constrained communication¶</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Synchronized_Operator.html#deadlock">Deadlock¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Synchronized Operator¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples¶</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#communication">Communication¶</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constrained-communication">Constrained communication¶</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deadlock">Deadlock¶</a></li>
 </ul>
 </li>
 </ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Synchronized Operator¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/Synchronized_Operator.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,106 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Synchronous_Operator.html" class="btn btn-neutral float-right" title="Synchronous Operator¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Synchronized_Channels_Operator.html" class="btn btn-neutral float-left" title="Synchronized Channels Operator¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="synchronized-operator">
+<h1>Synchronized Operator<a class="reference external" href="#Synchronized-Operator">¶</a><a class="headerlink" href="#synchronized-operator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>Syntax<a class="reference external" href="#Syntax">¶</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="ProcessBehaviour">processBehaviour</a> “||”
+<a class="reference external" href="ProcessBehaviour">processBehaviour</a></p>
+</div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<p>process1 || process2</p>
+<p>process1 and process2 are executed while synchronized over all channels,
+including <a class="reference external" href="EXIT">EXIT</a>.</p>
+<p>When both processes have exited then the synchronized composition exits.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="reference external" href="#Examples">¶</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="communication">
+<h3>Communication<a class="reference external" href="#Communication">¶</a><a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h3>
+<p>The statement</p>
+<pre>    Channel1_Int ? x
+||
+    Channel1_Int ? y
+</pre><div class="line-block">
+<div class="line">describes the process with two sub processes that are synchronized
+over all channels.</div>
+<div class="line">Since both sub processes want to communicate over Channel1_Int,
+communication is possible.</div>
+<div class="line">After that communication has occurred x and y contain the same value,
+and</div>
+<div class="line">since both communications have exited, the synchronized composition
+exits.</div>
+</div>
+</div>
+<div class="section" id="constrained-communication">
+<h3>Constrained communication<a class="reference external" href="#Constrained-communication">¶</a><a class="headerlink" href="#constrained-communication" title="Permalink to this headline">¶</a></h3>
+<p>The statement</p>
+<pre>    Channel1_Int ? x [[ x >= 10 ]]
+||
+    Channel1_Int ? y [[ y <= 20 ]]
+</pre><div class="line-block">
+<div class="line">describes the process with two sub processes that are synchronized
+over all channels.</div>
+<div class="line">Since both sub processes want to communicate over Channel1_Int and</div>
+<div class="line">both constraints can be simultaneously satisfied, communication is
+possible.</div>
+<div class="line">After that communication has occurred x and y contain the same value
+in the range [10,20]</div>
+<div class="line">and, since both communications have exited, the synchronized
+composition exits.</div>
+</div>
+</div>
+<div class="section" id="deadlock">
+<h3>Deadlock<a class="reference external" href="#Deadlock">¶</a><a class="headerlink" href="#deadlock" title="Permalink to this headline">¶</a></h3>
+<p>The statement</p>
+<pre>    Channel1_Int ? x
+||
+    Channel2_Int ? y
+</pre><div class="line-block">
+<div class="line">describes the process with two sub processes that are synchronized
+over all channels.</div>
+<div class="line">Since one sub process wants to communicate the variable x over
+Channel1_Int and</div>
+<div class="line">the other sub process wants to communicate the variable y over another
+channel, Channel2_Int,</div>
+<div class="line">communication under the synchronization constraint is not possible,
+i.e., the process is in
+<a class="reference external" href="https://en.wikipedia.org/wiki/Deadlock">deadlock</a>.</div>
+</div>
+</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Synchronous_Operator.html" class="btn btn-neutral float-right" title="Synchronous Operator¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Synchronized_Channels_Operator.html" class="btn btn-neutral float-left" title="Synchronized Channels Operator¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +559,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

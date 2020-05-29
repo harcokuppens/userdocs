@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Comment¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Communications¶" href="Communications.html" />
+    <link rel="prev" title="Commands¶" href="Commands.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -111,9 +112,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands¶</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Comment.html">Comment¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Comment.html#single-line-comment">Single line comment¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Comment.html#multiple-lines-comment">Multiple lines comment¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Comment¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#single-line-comment">Single line comment¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiple-lines-comment">Multiple lines comment¶</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Communications.html">Communications¶</a><ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Comment¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/Comment.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,57 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Communications.html" class="btn btn-neutral float-right" title="Communications¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Commands.html" class="btn btn-neutral float-left" title="Commands¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="comment">
+<h1>Comment<a class="reference external" href="#Comment">¶</a><a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h1>
+<p>TorXakis supports two kinds of
+<a class="reference external" href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">comment</a>:
+single line and multiple lines comment.</p>
+<div class="section" id="single-line-comment">
+<h2>Single line comment<a class="reference external" href="#Single-line-comment">¶</a><a class="headerlink" href="#single-line-comment" title="Permalink to this headline">¶</a></h2>
+<p>Single line comments in TorXakis start with ‘–’ (two hyphens) and
+continue up to the end of the line.</p>
+</div>
+<div class="section" id="multiple-lines-comment">
+<h2>Multiple lines comment<a class="reference external" href="#Multiple-lines-comment">¶</a><a class="headerlink" href="#multiple-lines-comment" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Multiple lines comments in TorXakis start with ‘{-’ and end with ‘-}’.</div>
+<div class="line">Nesting of multiple lines comments is not supported.</div>
+<div class="line">Take care not to comment with e.g. {– some comment with double -
+instead of a single - –} , as this seems to be interpreted as nested
+comments and this may result in unpredictable errors elsewhere in the
+code!</div>
+</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Communications.html" class="btn btn-neutral float-right" title="Communications¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Commands.html" class="btn btn-neutral float-left" title="Commands¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +510,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

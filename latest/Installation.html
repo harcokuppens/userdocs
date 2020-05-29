@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Install SMT Solver &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Interrupt Operator¶" href="Interrupt_Operator.html" />
+    <link rel="prev" title="Welcome to the TorXakis wiki!" href="Home.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -196,7 +197,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Home.html">Welcome to the TorXakis wiki!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Installation.html">Install SMT Solver</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install SMT Solver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Interrupt_Operator.html">Interrupt Operator¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IteValExpr.html">IF THEN ELSE Value Expression¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="IteValExpr.html#syntax">Syntax¶</a></li>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Install SMT Solver</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/Installation.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,83 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Interrupt_Operator.html" class="btn btn-neutral float-right" title="Interrupt Operator¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Home.html" class="btn btn-neutral float-left" title="Welcome to the TorXakis wiki!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <p># Installation</p>
+<p>The release can be downloaded from
+<a class="reference external" href="https://github.com/TorXakis/TorXakis/releases">releases</a>. For
+windows an installer is provided.</p>
+<p># Development</p>
+<p>To obtain the development version: * Clone the github archive using the
+URL <a class="reference external" href="https://github.com/TorXakis/TorXakis.git">https://github.com/TorXakis/TorXakis.git</a>. * Install stack * Run
+<code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">install</span></code> (takes over 1 hour) or <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">install</span> <span class="pre">--fast</span></code> *
+Install a SMT solver * Configure TorXakis to use the installed SMT
+Solver.</p>
+<p>The installation of a SMT Solver is described in more details in the
+following subsection.</p>
+<div class="section" id="install-smt-solver">
+<h1>Install SMT Solver<a class="headerlink" href="#install-smt-solver" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">TorXakis uses a satisfiability modulo theories (SMT) solver to handle
+the data constraints. For more info on SMT and the available SMT
+solvers see e.g. <a class="reference external" href="https://en.wikipedia.org/wiki/Satisfiability_modulo_theories">wiki on satisfiability modulo
+theories</a>.</div>
+<div class="line">TorXakis requires at least one installed SMT Solver.</div>
+<div class="line">However, since your TorXakis model determines how the SMT solver will
+be used, and each SMT solver has its strengths and weaknesses,</div>
+<div class="line">you might want to install multiple SMT Solvers and experiment with
+which SMT solver to use.</div>
+</div>
+<p>The TorXakis requirements for the SMT solver are</p>
+<ol class="arabic simple">
+<li><p>Support the <a class="reference external" href="http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.5-r2015-06-28.pdf">SMT-LIB version 2.5
+standard</a></p></li>
+<li><p>Support algebraic datatypes (as in the <a class="reference external" href="http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-draft-1.pdf">SMT-LIB version 2.6 standard
+draft</a>)</p></li>
+<li><p>Support <a class="reference external" href="http://cvc4.cs.nyu.edu/wiki/Strings">strings</a> (which will
+probably be included in the SMT-LIB version 3.0 standard)</p></li>
+</ol>
+<p>Since, some of the features TorXakis requires are not yet standardized,
+official releases of SMT solvers supporting all required features do not
+exist.</p>
+<p>TorXakis has been extensively tested with development versions of the
+SMT solvers <a class="reference external" href="http://cvc4.cs.nyu.edu/">CVC4</a> and
+<a class="reference external" href="https://github.com/Z3Prover/z3/wiki">Z3</a>.</p>
+<ul class="simple">
+<li><p>The development version of CVC4 for multiple different platforms can
+be downloaded from <a class="reference external" href="http://cvc4.cs.nyu.edu/downloads/">http://cvc4.cs.nyu.edu/downloads/</a> in the right
+column.</p></li>
+<li><p>The development version of Z3 for multiple different platforms can be
+downloaded from <a class="reference external" href="https://github.com/Z3Prover/bin/tree/master/nightly">https://github.com/Z3Prover/bin/tree/master/nightly</a></p></li>
+</ul>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Interrupt_Operator.html" class="btn btn-neutral float-right" title="Interrupt Operator¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Home.html" class="btn btn-neutral float-left" title="Welcome to the TorXakis wiki!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +536,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

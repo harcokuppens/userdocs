@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>Parallel Operator¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TorXakis Time Line" href="Planned-Releases.html" />
+    <link rel="prev" title="Model Definitions¶" href="ModelDefs.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -241,10 +242,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ModelDefs.html#examples">Examples¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Parallel_Operator.html">Parallel Operator¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Parallel_Operator.html#syntax">Syntax¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Parallel_Operator.html#semantics">Semantics¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Parallel_Operator.html#examples">Examples¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Parallel Operator¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples¶</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Planned-Releases.html">TorXakis Time Line</a></li>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Parallel Operator¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/Parallel_Operator.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,72 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Planned-Releases.html" class="btn btn-neutral float-right" title="TorXakis Time Line" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ModelDefs.html" class="btn btn-neutral float-left" title="Model Definitions¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="parallel-operator">
+<h1>Parallel Operator<a class="reference external" href="#Parallel-Operator">¶</a><a class="headerlink" href="#parallel-operator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>Syntax<a class="reference external" href="#Syntax">¶</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="ProcessBehaviour">processBehaviour</a> “|||”
+<a class="reference external" href="ProcessBehaviour">processBehaviour</a></p>
+</div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<p>process1 ||| process2</p>
+<div class="line-block">
+<div class="line">The processes 1 and 2 run independently in parallel.</div>
+<div class="line">No synchronization between the processes is required.</div>
+<div class="line">Of course, the processes might communicate with each other.</div>
+</div>
+<p>When both processes have exited then parallel composition exits</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="reference external" href="#Examples">¶</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The statement</p>
+<pre>ChannelId1 ? x ||| ChannelId2 ? y
+</pre><p>describes the process that can, in any order, do the following two
+things:</p>
+<ul class="simple">
+<li><p>Communicate variable x over ChannelId1</p></li>
+<li><p>Communicate variable y over ChannelId2</p></li>
+</ul>
+<p>The process ends when both communications have occurred.</p>
+<p>In other words, the following three behaviours can be observed:</p>
+<table><tbody><tr><td><p>First 1 then 2</p>
+</td><td><p>ChannelId1 ? x <a class="reference external" href="Sequence_Operator">&gt;-&gt;</a> ChannelId2 ? y</p>
+</td></tr><tr><td><p>First 2 then 1</p>
+</td><td><p>ChannelId2 ? y <a class="reference external" href="Sequence_Operator">&gt;-&gt;</a> ChannelId1 ? x</p>
+</td></tr><tr><td><p>Synchronously</p>
+</td><td><p>ChannelId1 ? x <a class="reference external" href="Synchronous_Operator">|</a> ChannelId2 ? y</p>
+</td></tr></tbody></table></div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Planned-Releases.html" class="btn btn-neutral float-right" title="TorXakis Time Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ModelDefs.html" class="btn btn-neutral float-left" title="Model Definitions¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +525,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

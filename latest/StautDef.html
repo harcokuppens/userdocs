@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>State Automaton Definition¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Synchronized Channels Operator¶" href="Synchronized_Channels_Operator.html" />
+    <link rel="prev" title="SmallId¶" href="SmallId.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -287,10 +288,10 @@
 <li class="toctree-l2"><a class="reference internal" href="SmallId.html#examples">Examples¶</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="StautDef.html">State Automaton Definition¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="StautDef.html#syntax">Syntax¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="StautDef.html#semantics">Semantics¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="StautDef.html#examples">Examples¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">State Automaton Definition¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples¶</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Synchronized_Channels_Operator.html">Synchronized Channels Operator¶</a><ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>State Automaton Definition¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/StautDef.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,120 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Synchronized_Channels_Operator.html" class="btn btn-neutral float-right" title="Synchronized Channels Operator¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="SmallId.html" class="btn btn-neutral float-left" title="SmallId¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="state-automaton-definition">
+<h1>State Automaton Definition<a class="reference external" href="#State-Automaton-Definition">¶</a><a class="headerlink" href="#state-automaton-definition" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>Syntax<a class="reference external" href="#Syntax">¶</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<table><tbody><tr><td><p>stautDef</p>
+</td><td><p>“STAUTDEF” procName “[” neChannelDeclList? “]” “(” neVarDeclList? “)”
+exitDecl? “::=” stautItem+ “ENDDEF”</p>
+</td></tr><tr><td><p>stautItem</p>
+</td><td><p>( “STATE” stateName
+| “VAR” neVarDeclList?
+| “INIT” stateName (“{” neUpdate “}”)? | “TRANS” transition+
+)</p>
+</td></tr><tr><td><p>transition</p>
+</td><td><p>statename “-&gt;” <a class="reference external" href="Communications">Communications</a> (“{” neUpdate “}”)?
+“-&gt;” stateName</p>
+</td></tr><tr><td><p>neUpdate</p>
+</td><td><p>neUpdate “:=” update (“;” update)*</p>
+</td></tr><tr><td><p>update</p>
+</td><td><p>varName “:=” <a class="reference external" href="ValExpr">valExpr</a></p>
+</td></tr><tr><td><p>neChannelsDeclList</p>
+</td><td><p>channelsDecl (“;” channelsDecl)*</p>
+</td></tr><tr><td><p>channelsDecl</p>
+</td><td><p>neChannelNameList (“::” neTypeNameList)?</p>
+</td></tr><tr><td><p>neChannelNameList</p>
+</td><td><p>channelName (“,” channelName)*</p>
+</td></tr><tr><td><p>neVarDeclList</p>
+</td><td><p>varsDecl (“;” varsDecl)*</p>
+</td></tr><tr><td><p>varsDecl</p>
+</td><td><p>neVarNameList “::” typeName</p>
+</td></tr><tr><td><p>neVarNameList</p>
+</td><td><p>varName (“,” varName)*</p>
+</td></tr><tr><td><p>exitDecl</p>
+</td><td><p>“EXIT” (“::” neTypeNameList)?</p>
+</td></tr><tr><td><p>neTypeNameList</p>
+</td><td><p>typeName (“#” typeName)*</p>
+</td></tr><tr><td><p>procName</p>
+</td><td><p><a class="reference external" href="SmallId">SmallId</a></p>
+</td></tr><tr><td><p>channelName</p>
+</td><td><p><a class="reference external" href="CapsId">CapsId</a></p>
+</td></tr><tr><td><p>typeName</p>
+</td><td><p><a class="reference external" href="CapsId">CapsId</a></p>
+</td></tr><tr><td><p>varName</p>
+</td><td><p><a class="reference external" href="SmallId">SmallId</a></p>
+</td></tr><tr><td><p>stateName</p>
+</td><td><p><a class="reference external" href="SmallId">SmallId</a></p>
+</td></tr></tbody></table></div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<p>Define a state automaton.</p>
+<p>A state automaton is a structure consisting of states, state variables,
+and transitions. A transition specifies how to go from one state to
+another state, while performing communications and updating the state
+variables. INIT specifies the initial state and the initial values of
+the state variables. The header of a state automaton definition is
+analogous to the header of <a class="reference external" href="ProcDefs">Process Definition PROCDEF</a>.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="reference external" href="#Examples">¶</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<pre>STAUTDEF  check1000 [ Add :: Int;  Sum :: Int;  Success ]  ( start_value :: Int )
+ ::=
+      STATE  state0, state1
+      VAR    sum :: Int
+      INIT   state0 { sum := start_value }
 
-  
-  <div id="search-results">
-  
-  </div>
+      TRANS  state0  ->  Add ? x    [[ x >= 0      ]]  { sum := sum + x }      ->  state1
+             state1  ->  Sum ! sum  [[ sum <= 1000 ]]  { }                     ->  state0
+             state1  ->  Success    [[ sum >= 1000 ]]  { sum := start_value }  ->  state0
+ENDDEF
+</pre><p>The state automaton <code class="docutils literal notranslate"><span class="pre">check1000</span></code> specifies a system with two state
+<code class="docutils literal notranslate"><span class="pre">state0</span></code> and <code class="docutils literal notranslate"><span class="pre">state1</span></code>, one state variable <code class="docutils literal notranslate"><span class="pre">sum</span></code>, and three
+transitions. The system adds positive integer inputs until the sum is at
+least 1000, upon which it outputs <code class="docutils literal notranslate"><span class="pre">success</span></code>. Then it restarts the
+process starting with <code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">:=</span> <span class="pre">start_value</span></code>. Note the non-determinism
+when the <code class="docutils literal notranslate"><span class="pre">sum</span></code> is exactly equal to 1000.</p>
+<pre>
+STAUTDEF m [C :: Int] () EXIT ::=
+    STATE   s0, s1, s2
+    INIT    s0
+    TRANS   s0 -> C ! 1 -> s1
+            s1 -> EXIT -> s2
+ENDDEF
+</pre><p>The state automaton <code class="docutils literal notranslate"><span class="pre">m</span></code> communicates <code class="docutils literal notranslate"><span class="pre">1</span></code> over channel <code class="docutils literal notranslate"><span class="pre">C</span></code> and then
+<code class="docutils literal notranslate"><span class="pre">EXIT</span></code>s.</p>
+</div>
+</div>
+
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Synchronized_Channels_Operator.html" class="btn btn-neutral float-right" title="Synchronized Channels Operator¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="SmallId.html" class="btn btn-neutral float-left" title="SmallId¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +573,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

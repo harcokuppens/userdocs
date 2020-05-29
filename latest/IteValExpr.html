@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
+  <title>IF THEN ELSE Value Expression¶ &mdash; TorXakis v0.9.0, Document version git-sha1-59f82b6 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Java program¶" href="Java_program.html" />
+    <link rel="prev" title="Interrupt Operator¶" href="Interrupt_Operator.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -198,9 +199,9 @@
 <li class="toctree-l1"><a class="reference internal" href="Home.html">Welcome to the TorXakis wiki!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Install SMT Solver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Interrupt_Operator.html">Interrupt Operator¶</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IteValExpr.html">IF THEN ELSE Value Expression¶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="IteValExpr.html#syntax">Syntax¶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="IteValExpr.html#semantics">Semantics¶</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IF THEN ELSE Value Expression¶</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#semantics">Semantics¶</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Java_program.html">Java program¶</a><ul>
@@ -410,14 +411,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>IF THEN ELSE Value Expression¶</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/search.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/harcokuppens/userdocs/blob/master/source/IteValExpr.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -426,29 +427,56 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Java_program.html" class="btn btn-neutral float-right" title="Java program¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Interrupt_Operator.html" class="btn btn-neutral float-left" title="Interrupt Operator¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="if-then-else-value-expression">
+<h1>IF THEN ELSE Value Expression<a class="reference external" href="#IF-THEN-ELSE-Value-Expression">¶</a><a class="headerlink" href="#if-then-else-value-expression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>Syntax<a class="reference external" href="#Syntax">¶</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<table><tbody><tr><td><p>iteValExpr</p>
+</td><td><p>“IF” [[valExpr]] “THEN” [[valExpr]] “ELSE” [[valExpr]] “FI”</p>
+</td></tr></tbody></table></div>
+<div class="section" id="semantics">
+<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
+<p>IF <code class="docutils literal notranslate"><span class="pre">expr1</span></code> THEN <code class="docutils literal notranslate"><span class="pre">expr2</span></code> ELSE <code class="docutils literal notranslate"><span class="pre">expr3</span></code> FI</p>
+<p>The type of <code class="docutils literal notranslate"><span class="pre">expr1</span></code> must be Boolean. The type of <code class="docutils literal notranslate"><span class="pre">expr2</span></code> must be
+equal to the type of <code class="docutils literal notranslate"><span class="pre">expr3</span></code>.</p>
+<p>The expressions <code class="docutils literal notranslate"><span class="pre">expr2</span></code> and <code class="docutils literal notranslate"><span class="pre">expr3</span></code> are only evaluated after the
+value of <code class="docutils literal notranslate"><span class="pre">expr1</span></code> is evaluated to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>, respectively.
+For Boolean expressions in which the order of evaluation is irrelevant,
+one could consider the <a class="reference external" href="https://en.wikipedia.org/wiki/Conditioned_disjunction">equivalent
+alternatives</a>:
+* (<code class="docutils literal notranslate"><span class="pre">expr1</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">expr2</span></code>) / (not(<code class="docutils literal notranslate"><span class="pre">expr1</span></code>) =&gt; <code class="docutils literal notranslate"><span class="pre">expr3</span></code>) or *
+(<code class="docutils literal notranslate"><span class="pre">expr1</span></code> / <code class="docutils literal notranslate"><span class="pre">expr2</span></code>) \/ (not(<code class="docutils literal notranslate"><span class="pre">expr1</span></code>) / <code class="docutils literal notranslate"><span class="pre">expr3</span></code>)</p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Java_program.html" class="btn btn-neutral float-right" title="Java program¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Interrupt_Operator.html" class="btn btn-neutral float-left" title="Interrupt Operator¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -481,14 +509,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
