@@ -6,7 +6,7 @@
 # -- manual configuration  -----------------------------------------------------
 
 github_user_or_organisation='harcokuppens'
-github_repo_name="continuous_publishing"
+github_repo_name="userdocs"
 
 # when publishing documentation as file assets on github use following filename:
 document_name_format="TorXakis-{TOOLVERSION}_Userguide-{DOCVERSION}"
