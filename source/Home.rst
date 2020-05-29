@@ -14,7 +14,7 @@ actual against the specified externally observable behaviour.
 TorXakis is a command line tool that takes zero or more specification
 files as input.
 
-.. figure:: https://github.com/TorXakis/TorXakis/wiki/torxakis.luckypeople.gif
+.. figure:: torxakis.luckypeople.png
    :alt: TorXakis in action!
 
    TorXakis in action!

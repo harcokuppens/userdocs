@@ -19,7 +19,6 @@ A TorXakis `specification <Language_Definition>`__ contains three parts:
 
 | TorXakis is a command line tool that takes zero or more
   `specification <Language_Definition>`__ files as input.
-| |image0|
 | TorXakis has many `commands <Commands>`__: the command ‘help’ provides
   a short summary of all `commands <Commands>`__.
 
@@ -29,5 +28,4 @@ A TorXakis Editor for the Eclipse IDE is provided as a plug-in. See
 | Copyright © 2015-2016 TNO and Radboud University
 | All rights reserved.
 
-.. |image0| image:: /attachments/download/1623/CommandLineTool.jpg
 

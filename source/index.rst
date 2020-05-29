@@ -24,7 +24,6 @@ Welcome to TorXakis User Documentation!
     Developers
     Disable_Operator
     EXIT
-    Eclipse
     Editors
     Enable_Operator
     FuncDefs
@@ -41,7 +40,6 @@ Welcome to TorXakis User Documentation!
     LetValExpr
     License
     ModelDefs
-    Notepad++
     Parallel_Operator
     Planned-Releases
     ProcCall
