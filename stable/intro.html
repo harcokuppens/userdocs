@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SmallId¶ &mdash; TorXakis v0.9.0, Document version v0.0.2 documentation</title>
+  <title>Introduction TorXakis &mdash; TorXakis v0.9.0, Document version v0.0.2 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="State Automaton Definition¶" href="StautDef.html" />
-    <link rel="prev" title="Sequence Operator¶" href="Sequence_Operator.html" /> 
+    <link rel="next" title="Grammar" href="grammar.html" />
+    <link rel="prev" title="Welcome to TorXakis User Documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,16 +85,16 @@
             
             
               <p class="caption"><span class="caption-text">Contents</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction TorXakis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#why-torxakis">Why TorXakis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#benefits">Benefits</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction TorXakis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-torxakis">Why TorXakis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benefits">Benefits</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Appendices</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="grammar.html">Grammar</a><ul class="current">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="grammar.html">Grammar</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Bugs.html">Bugs¶</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CapsId.html">CapsId¶</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="CapsId.html#semantics">Semantics¶</a></li>
@@ -292,9 +292,9 @@
 <li class="toctree-l3"><a class="reference internal" href="Sequence_Operator.html#examples">Examples¶</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SmallId¶</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#semantics">Semantics¶</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">Examples¶</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmallId.html">SmallId¶</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SmallId.html#semantics">Semantics¶</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SmallId.html#examples">Examples¶</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="StautDef.html">State Automaton Definition¶</a><ul>
@@ -422,9 +422,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="grammar.html">Grammar</a> &raquo;</li>
-        
-      <li>SmallId¶</li>
+      <li>Introduction TorXakis</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -438,10 +436,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="StautDef.html" class="btn btn-neutral float-right" title="State Automaton Definition¶" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="grammar.html" class="btn btn-neutral float-right" title="Grammar" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Sequence_Operator.html" class="btn btn-neutral float-left" title="Sequence Operator¶" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to TorXakis User Documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -450,18 +448,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="smallid">
-<h1>SmallId<a class="reference external" href="#SmallId">¶</a><a class="headerlink" href="#smallid" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="semantics">
-<h2>Semantics<a class="reference external" href="#Semantics">¶</a><a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h2>
-<table><tbody><tr><td><p>SmallId</p>
-</td><td><p>[a-z] [<a href="#id1"><span class="problematic" id="id2">A-Za-z0-9_</span></a>]*</p>
-</td></tr></tbody></table></div>
-<div class="section" id="examples">
-<h2>Examples<a class="reference external" href="#Examples">¶</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="introduction-torxakis">
+<h1>Introduction TorXakis<a class="headerlink" href="#introduction-torxakis" title="Permalink to this headline">¶</a></h1>
+<p>High-tech embedded systems are characterized by many components interacting closely with each other. These complex
+systems are extensively tested to ensure quality and performance. Although some testing activities have been automated,
+many test activities are still manual. TorXakis is a model-based testing tool that enables the next step in test
+automation.</p>
+<div class="section" id="why-torxakis">
+<h2>Why TorXakis<a class="headerlink" href="#why-torxakis" title="Permalink to this headline">¶</a></h2>
+<p>In the last decades, TESTING high-tech embedded systems has become an EXPENSIVE ACTIVITY. In many companies, testing
+currently accounts for more than half of the total costs. Why has the testing effort increased?</p>
+<ol class="arabic simple">
+<li><p>One, the PERFORMANCE, ranging from availability to robustness, and from throughput to response time, of these
+embedded systems has steadily increased.</p></li>
+<li><p>Two, the COMPLEXITY of these systems has increased substantially, not only in the number of system features,
+components, states, and configuration parameters, but also in the amount of input and output data.</p></li>
+<li><p>Last, automation of testing has so far been limited to test execution:
+testers STILL MANUALLY define many test cases to cover all requirements of the system, and
+whenever the system evolves, need to manually review and possible update all test cases.</p></li>
+</ol>
+<p>TorXakis is a model-based testing tool</p>
+<blockquote>
+<div><p>The TorXakis modelling language is POWERFUL ENOUGH TO CAPTURE THE BEHAVIOR of high-tech embedded systems, including
+COMMUNICATION, SYNCHRONIZATION, SEQUENCE, PARALLELISM, NON-DETERMINISM, CHOICES, STATES, AND CONSTRAINTS. Based on the
+model, TorXakis AUTOMATICALLY GENERATES AND EXECUTES TEST CASES. Consequently, whenever the system changes, testers
+only need to change the model to be able to test the changed system.</p>
+</div></blockquote>
+</div>
+<div class="section" id="benefits">
+<h2>Benefits<a class="headerlink" href="#benefits" title="Permalink to this headline">¶</a></h2>
+<p>When using TorXakis, one will not only experience the BENEFITS OF MODELLING in general, such as:</p>
 <ul class="simple">
-<li><p>a</p></li>
-<li><p>bar_12</p></li>
+<li><p>Modelling systems during design typically EXPOSES CONCEPTUAL ERRORS EARLY; and</p></li>
+<li><p>Using models with an explicit semantic instead of free format text documents and/or presentations during design and
+development REDUCES THE RISKS OF MISINTERPRETATION AND MISCOMMUNICATION.</p></li>
+</ul>
+<p>But also, the following TorXakis specific benefits:</p>
+<ul class="simple">
+<li><p>The model will provide A TESTABLE INTERFACE BETWEEN DESIGN AND DEVELOPMENT. On the one hand, the model is the
+SPECIFICATION FOR DEVELOPMENT. On the other hand, TorXakis can CHECK WHETHER THE DEVELOPED SYSTEM ADHERES TO THE
+MODEL;</p></li>
+<li><p>The formal sematics of TorXakis will ensure unambiguous test results; and</p></li>
+<li><p>Test effort is reduced. Instead of building and maintaining a collection of test cases, one only needs to build and
+maintain a model, from which TorXakis will automatically generate test cases.</p></li>
 </ul>
 </div>
 </div>
@@ -474,10 +503,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="StautDef.html" class="btn btn-neutral float-right" title="State Automaton Definition¶" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="grammar.html" class="btn btn-neutral float-right" title="Grammar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Sequence_Operator.html" class="btn btn-neutral float-left" title="Sequence Operator¶" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to TorXakis User Documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
