@@ -92,16 +92,17 @@ print("toolversion: " +toolversion)
 print("pdfdocumenturl: " +pdfdocumenturl)        
 print("document_overview_url: " +document_overview_url)        
 
-#rst_code = '''
-rst_epilog = '''
+url_and_versions =  '''
 .. |TOOLVERSION| replace:: {toolversion}
 .. |DOCVERSION| replace:: {docversion}
 .. _PDFDOCUMENTURL: {pdfdocumenturl}
 .. _DOCUMENT_OVERVIEW_URL: {document_overview_url}
 '''.format(toolversion=toolversion,pdfdocumenturl=pdfdocumenturl,docversion=docversion,document_overview_url=document_overview_url)
 # see for the hyperref syntax: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#embedded-uris-and-aliases
-
-
+try: rst_epilog
+except NameError:
+  rst_epilog=""
+rst_epilog = rst_epilog + url_and_versions
 
 # -- get the filename of the build pdf (SPHINX_BUILD_PDF) ----------
 
