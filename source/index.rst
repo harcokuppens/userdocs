@@ -7,6 +7,10 @@
 TorXakis User Documentation
 =======================================================
 
+Documentation version '|DOCVERSION|' for TorXakis version '|TOOLVERSION|'.
+
+This documentation is also available as printable format as `PDF document <PDFDOCUMENTURL_>`_ .
+For other versions see the `documentation overview webpage <DOCUMENT_OVERVIEW_URL_>`_. 
 
 .. toctree::
    :caption: Contents
